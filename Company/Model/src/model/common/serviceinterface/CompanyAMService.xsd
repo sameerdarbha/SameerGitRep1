@@ -1,0 +1,14 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="/model/common/types/"
+     xmlns:tns="/model/common/types/" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/">
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd"/>
+    <element name="validate">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="validateResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+</schema>

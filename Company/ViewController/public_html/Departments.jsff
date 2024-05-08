@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:table value="#{bindings.DepartmentsVO.collectionModel}" var="row"
+            rows="#{bindings.DepartmentsVO.rangeSize}"
+            emptyText="#{bindings.DepartmentsVO.viewable ? 'No data to display.' : 'Access Denied.'}"
+            fetchSize="#{bindings.DepartmentsVO.rangeSize}"
+            rowBandingInterval="0"
+            selectedRowKeys="#{bindings.DepartmentsVO.collectionModel.selectedRow}"
+            selectionListener="#{bindings.DepartmentsVO.collectionModel.makeCurrent}"
+            rowSelection="single" id="t1" width="100%">
+    <af:column sortProperty="#{bindings.DepartmentsVO.hints.DepartmentId.name}"
+               sortable="false"
+               headerText="#{bindings.DepartmentsVO.hints.DepartmentId.label}"
+               id="c4">
+      <af:outputText value="#{row.DepartmentId}" id="ot2">
+        <af:convertNumber groupingUsed="false"
+                          pattern="#{bindings.DepartmentsVO.hints.DepartmentId.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.DepartmentsVO.hints.DepartmentName.name}"
+               sortable="false"
+               headerText="#{bindings.DepartmentsVO.hints.DepartmentName.label}"
+               id="c3">
+      <af:commandLink id="cl1" action="details">
+        <af:outputText value="#{row.DepartmentName}" id="ot4"/>
+      </af:commandLink>
+    </af:column>
+    <af:column sortProperty="#{bindings.DepartmentsVO.hints.LocationId.name}"
+               sortable="false"
+               headerText="#{bindings.DepartmentsVO.hints.LocationId.label}"
+               id="c1">
+      <af:outputText value="#{row.LocationId}" id="ot1">
+        <af:convertNumber groupingUsed="false"
+                          pattern="#{bindings.DepartmentsVO.hints.LocationId.format}"/>
+      </af:outputText>
+    </af:column>
+    <af:column sortProperty="#{bindings.DepartmentsVO.hints.ManagerId.name}"
+               sortable="false"
+               headerText="#{bindings.DepartmentsVO.hints.ManagerId.label}"
+               id="c2">
+      <af:outputText value="#{row.ManagerId}" id="ot3">
+        <af:convertNumber groupingUsed="false"
+                          pattern="#{bindings.DepartmentsVO.hints.ManagerId.format}"/>
+      </af:outputText>
+    </af:column>
+  </af:table>
+</jsp:root>

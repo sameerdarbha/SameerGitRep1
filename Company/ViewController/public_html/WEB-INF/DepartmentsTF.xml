@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="DepartmentsTF">
+    <default-activity id="__3">Departments</default-activity>
+    <view id="Departments">
+      <page>/Departments.jsff</page>
+    </view>
+    <view id="DepartmentDetails">
+      <page>/DepartmentDetails.jsff</page>
+    </view>
+    <control-flow-rule id="__4">
+      <from-activity-id id="__5">Departments</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome id="__8">details</from-outcome>
+        <to-activity-id id="__7">DepartmentDetails</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id id="__10">DepartmentDetails</from-activity-id>
+      <control-flow-case id="__11">
+        <from-outcome id="__13">back</from-outcome>
+        <to-activity-id id="__12">Departments</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

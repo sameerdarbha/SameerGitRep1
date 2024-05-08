@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/ui/pattern/dynamicShell/dynamicTabShell.jspx"
+                         value="#{bindings.pageTemplateBinding}" id="pt1">
+          <f:facet name="copyright"/>
+          <f:facet name="about"/>
+          <f:facet name="navigation">
+            <af:panelList id="pl1">
+              <af:commandLink text="Home" id="cl2"
+                              actionListener="#{backingBeanScope.companyDashboardBean.launchWelcomeTF}"/>
+              <af:commandLink text="Departments" id="cl1"
+                              actionListener="#{backingBeanScope.companyDashboardBean.launchDepartmentsTF}"/>
+            </af:panelList>
+          </f:facet>
+          <f:facet name="globalLinks"/>
+          <f:facet name="status"/>
+          <f:facet name="globalToolbar"/>
+          <f:facet name="globalSearch"/>
+          <f:facet name="globalTabs"/>
+          <f:facet name="welcome">
+            <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"/>
+          </f:facet>
+          <f:facet name="innerToolbar"/>
+          <f:attribute name="brandingTitle" value="Company Details"/>
+          <f:attribute name="headerSplitterPosition" value="30"/>
+          <f:attribute name="logoImagePath"
+                       value="http://www.hcentive.com/images/logo-dark-gray-temp.png"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
