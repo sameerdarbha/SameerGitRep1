@@ -6,3 +6,4 @@ modified for stashing in branch1
 modified for stashing in branch1
 
 branch1 commit 1
+branch1 commit 2
