@@ -16,3 +16,5 @@ branch1 commit 4
 
 branch1 commit 5
 branch1 commit 6
+
+branch1 commit 7
