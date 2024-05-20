@@ -7,3 +7,6 @@ modified for stashing in branch1
 
 master commit 1
 master commit 2
+
+branch1 commit 1
+branch1 commit 2
